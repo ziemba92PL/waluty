@@ -10,9 +10,9 @@ let USDValue = 4.45;
 let GBPValue = 5.35;
 let CHFValue = 4.72;
 
-function printValue(plnValue, currencyIndex, c) {
+function printValue(plnValue, dupa) {
   console.log(plnValue + " zł to Wartość w Euro to: " +
-    c[currencyIndex] + " EUR");
+  plnValue / dupa + " EUR");
 }
 
 console.log("Przelicz złotówki na inne waluty");
@@ -22,4 +22,4 @@ let exchange = parseInt(prompt("Wybierz walutę"));
 console.log(" Podaj kwotę w złotówkach: ");
 let PLNValue = parseInt(prompt("Podaj kwotę w złotówkach: "));
 
-printValue(PLNValue, exchange - 1, currency);
+printValue(PLNValue, currency[exchange - 1]);
